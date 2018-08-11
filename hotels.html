@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Седона - список отелей</title>
+        <link rel="stylesheet" href="/css/main.css"> <!-- какой то стиль... -->
+    </head>
+    <body>
+        <header class="header-page">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="info.html">Информация</a></li>
+                    <li><a href="materials.html">Фото и видео</a></li>
+                    <li><a href="map.html">Карта штата</a></li>
+                    <li><a href="hotels.html">Гостиницы</a></li>
+                </ul>
+            </nav>
+            <a class="header-page-logo">
+                <img src="logo.png" alt="Логотип Sedona" width="140" height="70">
+            </a>
+            <img src="header-main-image-2.png" alt="Изображение с видами Седоны" class="header-main-image" width="1200" height="560">
+        </header> <!-- шапка сайта -->
+
+        <main class="content-page">
+            <h1 class="hidden-content">HTML Academy: Седона - список отелей</h1> <!-- hidden-content - скрытый заголовок страницы со списком отелей -->
+            <div class="wrapper-search-category">
+                <section class="search-category">
+                    <h2>Инфраструктура</h2>
+                    <ul>
+                        <li>
+                            <input id="1" type="checkbox">
+                            <label for="1">Бассейн</label>
+                        </li>
+                        <li>
+                            <input id="2" type="checkbox">
+                            <label for="2">Парковка</label>
+                        </li>
+                        <li>
+                            <input id="3" type="checkbox">
+                            <label for="3">Wi-Fi</label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="search-category">
+                    <h2>Тип жилья</h2>
+                    <ul>
+                        <li>
+                            <input id="4" type="checkbox">
+                            <label for="4">Гостиница</label>
+                        </li>
+                        <li>
+                            <input id="5" type="checkbox">
+                            <label for="5">Мотель</label>
+                        </li>
+                        <li>
+                            <input id="6" type="checkbox">
+                            <label for="6">Аппартаменты</label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="search-category category-right-align">
+                    <h2>Стоимость в сутки (Р):</h2>
+                    <ul>
+                        <li>
+                            <span class="">
+                                <input type="text" placeholder="От 0">
+                                <input type="text" placeholder="До 3000">
+                            </span>
+                        </li>
+                        <li>
+                            <input type="range">
+                        </li>
+                        <li>
+                            <a class="button" href="#">Показать</a>
+                        </li>
+                    </ul>
+                </section>
+            </div> <!-- блок с формами установки критериев для поиска отеля -->
+
+
+        </main> <!-- главный блок сайта -->
+
+        <footer class="footer-page">
+            <p class="hashtag">#visitsedona</p>
+            <div class="social-contact">
+                <ul>
+                    <li><a class="social-button" href="#">Вконтакте</a></li>
+                    <li><a class="social-button" href="#">Facebook</a></li>
+                    <li><a class="social-button" href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <p class="copyright-info">
+                <span>website by</span>
+                <img src="html-academy-logo.png" alt="HTML Academy logo" width="115" height="40">
+            </p>
+        </footer> <!-- подвал сайта -->
+
+        <script src="js/main.js"></script> <!-- какой то скрипт... -->
+    </body>
+</html>
