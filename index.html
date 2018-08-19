@@ -86,27 +86,36 @@
                     </p>
                     <a class="button" href="#">Поиск гостиницы в Седоне</a>
 
-                    <form action="" method="get" class="modal modal-search-param">
-                        <p>
-                            <label for="occupancy-date">Дата заезда</label>
-                            <input name="occupancy-date" id="occupancy-date" type="text">
-                        </p>
-                        <p>
-                            <label for="eviction-date">Дата выезда</label>
-                            <input name="eviction-date" id="eviction-date" type="text">
-                        </p>
-                        <p>
-                            <span class="wrapper-field">
-                                <label for="adults-sum">Взрослые</label>
-                                <input name="adults-sum" id="adults-sum" type="text">
-                            </span>
-                            <span class="wrapper-field">
-                                <label for="childrens-sum">Дети</label>
-                                <input name="childrens-sum" id="childrens-sum" type="text">
-                            </span>
-                        </p>
-                        <button type="submit" class="button">Найти</button>
-                    </form> <!-- всплывающее окно с информацией для выбора гостиниц -->
+                    <div class="modal modal-search-param">
+                        <form action="https://echo.htmlacademy.ru" method="get">
+                            <p>
+                                <label for="occupancy-date">Дата заезда</label>
+                                <input name="occupancy-date" id="occupancy-date" type="text">
+                                <input type="image" alt="Календарь" src="img/svg-sedona/calendar.svg">
+                            </p>
+                            <p>
+                                <label for="eviction-date">Дата выезда</label>
+                                <input name="eviction-date" id="eviction-date" type="text">
+                                <input type="image" alt="Календарь" src="img/svg-sedona/calendar.svg">
+                            </p>
+                            <div>
+                                <div class="wrapper-field">
+                                    <label for="adults-sum">Взрослые</label>
+                                    <button type="button">-</button>
+                                    <input name="adults-sum" id="adults-sum" type="text">
+                                    <button type="button">+</button>
+                                </div>
+                                <div class="wrapper-field">
+
+                                    <label for="childrens-sum">Дети</label>
+                                    <button type="button">-</button>
+                                    <input name="childrens-sum" id="childrens-sum" type="text">
+                                    <button type="button">+</button>
+                                </div>
+                            </div>
+                            <button type="submit" class="button">Найти</button>
+                        </form> <!-- всплывающее окно с информацией для выбора гостиниц -->
+                    </div>
 
                     <section class="map-search-hotels">
                         <!-- карта для поиска гостиниц -->

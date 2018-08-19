@@ -23,59 +23,59 @@
         <main class="content-page">
             <img src="img/filter-background.jpg" alt="Изображение с видами Седоны" class="header-main-image" width="1200" height="560">
             <h1 class="hidden-content">HTML Academy: Седона - список отелей</h1> <!-- hidden-content - скрытый заголовок страницы со списком отелей -->
-            <form action="" method="get" class="wrapper-search-category">
-                <fieldset class="search-category">
-                    <legend>Инфраструктура</legend>
-                    <ul>
-                        <li>
-                            <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" type="checkbox" class="visually-hidden">
-                            <label tabindex="0" for="filter-infrastructure-pool">Бассейн</label>
-                        </li>
-                        <li>
-                            <input name="filter-infrastructure-parking" id="filter-infrastructure-parking" type="checkbox" class="visually-hidden">
-                            <label tabindex="0" for="filter-infrastructure-parking">Парковка</label>
-                        </li>
-                        <li>
-                            <input name="filter-infrastructure-wi-fi" id="filter-infrastructure-wi-fi" type="checkbox" class="visually-hidden">
-                            <label tabindex="0" for="filter-infrastructure-wi-fi">Wi-Fi</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset class="search-category">
-                    <legend>Тип жилья</legend>
-                    <ul>
-                        <li>
-                            <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" type="checkbox" class="visually-hidden">
-                            <label tabindex="0" for="filter-type-accommodation-hotel">Гостиница</label>
-                        </li>
-                        <li>
-                            <input name="filter-type-accommodation-motel" id="filter-type-accommodation-motel" type="checkbox" class="visually-hidden">
-                            <label tabindex="0" for="filter-type-accommodation-motel">Мотель</label>
-                        </li>
-                        <li>
-                            <input name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" type="checkbox" class="visually-hidden">
-                            <label tabindex="0" for="filter-type-accommodation-apartments">Аппартаменты</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset class="search-category category-right-align">
-                    <legend>Стоимость в сутки (Р):</legend>
-                    <ul>
-                        <li>
-                            <span class="">
-                                <input name="price-from" type="text" placeholder="От 0">
-                                <input name="price-before" type="text" placeholder="До 3000">
-                            </span>
-                        </li>
-                        <li>
+            <div class="wrapper-search-category">
+                <form action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset class="search-category">
+                        <legend>Инфраструктура</legend>
+                        <ul>
+                            <li>
+                                <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" type="checkbox" class="visually-hidden">
+                                <label tabindex="0" for="filter-infrastructure-pool">Бассейн</label>
+                            </li>
+                            <li>
+                                <input name="filter-infrastructure-parking" id="filter-infrastructure-parking" type="checkbox" class="visually-hidden">
+                                <label tabindex="0" for="filter-infrastructure-parking">Парковка</label>
+                            </li>
+                            <li>
+                                <input name="filter-infrastructure-wi-fi" id="filter-infrastructure-wi-fi" type="checkbox" class="visually-hidden">
+                                <label tabindex="0" for="filter-infrastructure-wi-fi">Wi-Fi</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="search-category">
+                        <legend>Тип жилья</legend>
+                        <ul>
+                            <li>
+                                <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" type="checkbox" class="visually-hidden">
+                                <label tabindex="0" for="filter-type-accommodation-hotel">Гостиница</label>
+                            </li>
+                            <li>
+                                <input name="filter-type-accommodation-motel" id="filter-type-accommodation-motel" type="checkbox" class="visually-hidden">
+                                <label tabindex="0" for="filter-type-accommodation-motel">Мотель</label>
+                            </li>
+                            <li>
+                                <input name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" type="checkbox" class="visually-hidden">
+                                <label tabindex="0" for="filter-type-accommodation-apartments">Аппартаменты</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="search-category category-right-align">
+                        <legend>Стоимость в сутки (Р):</legend>
+
+                        <p>
+                            <input name="price-from" type="text" placeholder="От 0">
+                            <input name="price-before" type="text" placeholder="До 3000">
+                        </p>
+                        <p>
                             <input type="range">
-                        </li>
-                        <li>
+                        </p>
+                        <p>
                             <button type="submit" class="button">Показать</button>
-                        </li>
-                    </ul>
-                </fieldset>
-            </form> <!-- блок с формами установки критериев для поиска отеля -->
+                        </p>
+                    </fieldset>
+                </form> <!-- блок с формами установки критериев для поиска отеля -->
+            </div>
+
 
             <section class="search-result">
                 <header>
@@ -86,11 +86,14 @@
                     </div>
 
                     <ul>
-                        <li class="sort-by-price"><button type="button">По цене</button></li>
-                        <li class="sort-by-type"><button type="button">По типу</button></li>
-                        <li class="sort-by-rating"><button type="button">По рейтингу</button></li>
+                        <li class="sort-by-price"><a href="#" class="button">По цене</a></li>
+                        <li class="sort-by-type"><a href="#" class="button">По типу</a></li>
+                        <li class="sort-by-rating"><a href="#" class="button">По рейтингу</a></li>
+                    </ul>
 
-                        <li class="sort-by-order"><button type="button"></button></li>
+                    <ul>
+                        <li class="sort-by-order-up"><a href="#" class="button"></a></li>
+                        <li class="sort-by-order-down"><a href="#" class="button"></a></li>
                     </ul>
                 </header>
                 <section class="hotel-item">
@@ -102,18 +105,11 @@
                             <span class="price">От 4000 р.</span>
                         </div>
                         <div class="actions">
-                            <a href="#">Подробнее</a> <button type="button">Забронировать</button>
+                            <a href="#">Подробнее</a> <a href="#" class="button">Забронировать</a>
                         </div>
                     </div>
                     <div class="status">
-                        <div class="stars">
-                            <ul>
-                                <li></li> <!-- закрашенная звезда -->
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
+                        <div class="stars"></div>
                         <div class="rating">Рейтинг: <output>8,5</output></div>
                     </div>
                 </section> <!-- отель - 1 -->
@@ -126,17 +122,11 @@
                             <span class="price">От 3000 р.</span>
                         </div>
                         <div class="actions">
-                            <a href="#">Подробнее</a> <button type="button">Забронировать</button>
+                            <a href="#">Подробнее</a> <a href="#" class="button">Забронировать</a>
                         </div>
                     </div>
                     <div class="status">
-                        <div class="stars">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
+                        <div class="stars"></div>
                         <div class="rating">Рейтинг: <output>8,9</output></div>
                     </div>
                 </section> <!-- отель - 2 -->
@@ -149,16 +139,11 @@
                             <span class="price">От 2000 р.</span>
                         </div>
                         <div class="actions">
-                            <a href="#">Подробнее</a> <button type="button">Забронировать</button>
+                            <a href="#">Подробнее</a> <a href="#" class="button">Забронировать</a>
                         </div>
                     </div>
                     <div class="status">
-                        <div class="stars">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
+                        <div class="stars"></div>
                         <div class="rating">Рейтинг: <output>9,2</output></div>
                     </div>
                 </section> <!-- отель - 3 -->
