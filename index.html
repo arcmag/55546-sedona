@@ -86,26 +86,26 @@
                     </p>
                     <a class="button" href="#">Поиск гостиницы в Седоне</a>
 
-                    <form class="modal modal-search-param">
+                    <form action="" method="get" class="modal modal-search-param">
                         <p>
                             <label for="occupancy-date">Дата заезда</label>
-                            <input id="occupancy-date" type="text">
+                            <input name="occupancy-date" id="occupancy-date" type="text">
                         </p>
                         <p>
                             <label for="eviction-date">Дата выезда</label>
-                            <input id="eviction-date" type="text">
+                            <input name="eviction-date" id="eviction-date" type="text">
                         </p>
                         <p>
                             <span class="wrapper-field">
                                 <label for="adults-sum">Взрослые</label>
-                                <input id="adults-sum" type="text">
+                                <input name="adults-sum" id="adults-sum" type="text">
                             </span>
                             <span class="wrapper-field">
                                 <label for="childrens-sum">Дети</label>
-                                <input id="childrens-sum" type="text">
+                                <input name="childrens-sum" id="childrens-sum" type="text">
                             </span>
                         </p>
-                        <a class="button" href="#">Найти</a>
+                        <button type="submit" class="button">Найти</button>
                     </form> <!-- всплывающее окно с информацией для выбора гостиниц -->
 
                     <section class="map-search-hotels">
