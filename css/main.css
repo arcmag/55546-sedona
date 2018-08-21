@@ -1,19 +1,21 @@
 /*--------------------------- fonts --------------------------------*/
 
+
 @font-face {
     font-family:'PT Sans';
-    src: url('../fonts/ptsans/ptsansbold.woff2') format('woff2'), url('../fonts/ptsans/ptsansbold.woff') format('woff');
+    src: url('../fonts/ptsans/PTsansBold.woff2') format('woff2'), url('../fonts/ptsans/PTsansBold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 @font-face {
     font-family:'PT Sans';
-    src: url('../fonts/ptsans/ptsans.woff2') format('woff2'), url('../fonts/ptsans/ptsans.woff') format('woff');
+    src: url('../fonts/ptsans/PTsans.woff2') format('woff2'), url('../fonts/ptsans/PTsans.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
+
 
 /*------------------------------------------------------------------------------------------*/
 *, *::before, *::after{
@@ -26,7 +28,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", "Arial", "sans-serif";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     color: #000;
     background: #FFF;
