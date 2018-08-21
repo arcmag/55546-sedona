@@ -3,16 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона - список отелей</title>
-        <link rel="stylesheet" href="css/main.css"> <!-- какой то стиль... -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="fonts/myriad_pro/stylesheet.css">
+        <link rel="stylesheet" href="fonts/ptsans/ptsans.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
+    <body class="hotels-page">
         <header class="header-page">
             <nav class="main-nav">
                 <ul>
-                    <li><a href="info.html">Информация</a></li>
-                    <li><a href="materials.html">Фото и видео</a></li>
-                    <li><a href="map.html">Карта штата</a></li>
-                    <li><a href="hotels.html">Гостиницы</a></li>
+                    <li><a class="link" href="info.html">Информация</a></li>
+                    <li><a class="link" href="materials.html">Фото и видео</a></li>
+                    <li><a class="link" href="map.html">Карта штата</a></li>
+                    <li><a class="link" href="hotels.html">Гостиницы</a></li>
                 </ul>
             </nav>
             <a class="header-page-logo">
@@ -21,8 +24,7 @@
         </header> <!-- шапка сайта -->
 
         <main class="content-page">
-            <img src="img/filter-background.jpg" alt="Изображение с видами Седоны" class="header-main-image" width="1200" height="560">
-            <h1 class="hidden-content">HTML Academy: Седона - список отелей</h1> <!-- hidden-content - скрытый заголовок страницы со списком отелей -->
+            <h1 class="visually-hidden">HTML Academy: Седона - список отелей</h1>
             <div class="wrapper-search-category">
                 <form action="https://echo.htmlacademy.ru" method="get">
                     <fieldset class="search-category">
@@ -78,71 +80,71 @@
 
             <section class="search-result">
                 <header>
-                    <h2 class="hidden-content">Результаты поиска</h2> <!-- hidden-content - скрытый заголовок страницы со списком отелей -->
+                    <h2 class="visually-hidden">Результаты поиска</h2>
                     <div class="result">
                         <span class="total-count">Найдено:</span> <output>3</output>
                         <span class="sort">Сортировка: </span>
                     </div>
 
-                    <ul>
-                        <li class="sort-by-price"><a href="#" class="button">По цене</a></li>
-                        <li class="sort-by-type"><a href="#" class="button">По типу</a></li>
-                        <li class="sort-by-rating"><a href="#" class="button">По рейтингу</a></li>
+                    <ul class="sort-list sort-list-by-category">
+                        <li class="sort-by-price"><a href="#" class="">По цене</a></li>
+                        <li class="sort-by-type"><a href="#" class="">По типу</a></li>
+                        <li class="sort-by-rating"><a href="#" class="">По рейтингу</a></li>
                     </ul>
 
-                    <ul>
-                        <li class="sort-by-order-up"><a href="#" class="button"></a></li>
-                        <li class="sort-by-order-down"><a href="#" class="button"></a></li>
+                    <ul class="sort-list sort-list-by-value">
+                        <li class="sort-by-order-up"><a href="#" class=""></a></li>
+                        <li class="sort-by-order-down"><a href="#" class=""></a></li>
                     </ul>
                 </header>
                 <section class="hotel-item">
                     <img class="hotel-image" src="img/hotel-image-1.jpg" alt="Картинка найденного отеля 1" width="135" height="90">
                     <div class="hotel-info">
-                        <h3 class="title">Amara resort & spa</h3>
+                        <h3 class="title"><a class="link" href="#">Amara resort & spa</a></h3>
                         <div class="type">
                             <span class="type">Гостиница</span>
                             <span class="price">От 4000 р.</span>
                         </div>
                         <div class="actions">
-                            <a href="#">Подробнее</a> <a href="#" class="button">Забронировать</a>
+                            <a href="#" class="button button-type-1">Подробнее</a> <a href="#" class="button button-type-2">Забронировать</a>
                         </div>
                     </div>
                     <div class="status">
-                        <div class="stars"></div>
+                        <div class="stars four-star"></div>
                         <div class="rating">Рейтинг: <output>8,5</output></div>
                     </div>
                 </section> <!-- отель - 1 -->
                 <section class="hotel-item">
                     <img class="hotel-image" src="img/hotel-image-2.jpg" alt="Картинка найденного отеля 2" width="135" height="90">
                     <div class="hotel-info">
-                        <h3 class="title">Desert quail inn</h3>
+                        <h3 class="title"><a class="link" href="#">Desert quail inn<a/></h3>
                         <div class="type">
                             <span class="type">Мотель</span>
                             <span class="price">От 3000 р.</span>
                         </div>
                         <div class="actions">
-                            <a href="#">Подробнее</a> <a href="#" class="button">Забронировать</a>
+                            <a href="#" class="button button-type-1">Подробнее</a> <a href="#" class="button button-type-2">Забронировать</a>
                         </div>
                     </div>
                     <div class="status">
-                        <div class="stars"></div>
+                        <div class="stars three-star"></div>
                         <div class="rating">Рейтинг: <output>8,9</output></div>
                     </div>
                 </section> <!-- отель - 2 -->
                 <section class="hotel-item">
                     <img class="hotel-image" src="img/hotel-image-3.jpg" alt="Картинка найденного отеля 3" width="135" height="90">
                     <div class="hotel-info">
-                        <h3 class="title">Villas at poco diablo</h3>
+                        <h3 class="title"><a class="link" href="#">Villas at poco diablo</a></h3>
                         <div class="type">
-                            <span class="type">Апартамента</span>
+                            <span class="type">Апартаменты</span>
                             <span class="price">От 2000 р.</span>
                         </div>
                         <div class="actions">
-                            <a href="#">Подробнее</a> <a href="#" class="button">Забронировать</a>
+                            <a href="#" class="button button-type-1">Подробнее</a> <a href="#" class="button button-type-2">Забронировать</a>
                         </div>
                     </div>
                     <div class="status">
-                        <div class="stars"></div>
+                        <div class="stars two-star"></div>
                         <div class="rating">Рейтинг: <output>9,2</output></div>
                     </div>
                 </section> <!-- отель - 3 -->
@@ -153,14 +155,14 @@
             <p class="hashtag">#visitsedona</p>
             <div class="social-contact">
                 <ul>
-                    <li><a class="social-button" href="#">Вконтакте</a></li>
-                    <li><a class="social-button" href="#">Facebook</a></li>
-                    <li><a class="social-button" href="#">Instagram</a></li>
+                    <li><a class="button button-type-1 social-button tw" href="#">Twitter</a></li>
+                    <li><a class="button button-type-1 social-button fb" href="#">Facebook</a></li>
+                    <li><a class="button button-type-1 social-button yt" href="#">Youtube</a></li>
                 </ul>
             </div>
             <p class="copyright-info">
                 <span>website by</span>
-                <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <a class="link-academy" href="https://htmlacademy.ru/intensive/htmlcss">
                     <img src="img/svg-sedona/logo-htmlacademy.svg" alt="HTML Academy logo" width="115" height="40">
                 </a>
             </p>

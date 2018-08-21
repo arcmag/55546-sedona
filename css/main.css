@@ -1,0 +1,149 @@
+*, *::before, *::after{box-sizing: inherit;}
+html{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "sans-serif";
+    font-size: 14px;
+    color: #000;
+    background: #FFF;
+    text-transform: uppercase;
+    line-height: 21px;
+    font-family: 'Myriad Pro';
+    font-family: 'PT Sans';
+}
+
+a{text-decoration: none;}
+
+.button{
+    background: rgb(129, 179, 210);
+    border: 0px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.button-type-1{background-color: #81b3d2;}
+.button-type-1:hover{background-color: #669ec0;}
+.button-type-1:active{background-color: #5496bd; color: #7aadcb;}
+
+.button-type-2{background: #766357;}
+.button-type-2:hover{background: #604e43;}
+.button-type-2:active{background: #503e33; color: #857871;}
+
+.link{color: #000;}
+.link:hover{color: #a3c7de;}
+.link:active{color: #b2b2b2;}
+/*---------------------------- index ---------------------------------------*/
+.main-nav{
+    color: #000;
+    background: #FFF;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+}
+.main-nav ul{list-style-type: none; text-align: center;}
+.main-nav a.active{color: #766357;}
+
+body.main-page{text-align: center;}
+
+.content-page h1{font-size: 21px;}
+
+.dignity-list{background: #FFF;}
+.dignity-list h3, .dignity-list h4{font-size: 21px; font-weight: bold;}
+.dignity-list .dignity-item{background: #eeeeee;}
+.dignity-list .dignity-item.allotted-item{background: #81b3d2; color: #FFF;}
+
+.content-page footer .title{font-size: 30px; font-weight: bold;}
+
+.modal-search-param form{
+    text-align: left;
+    font-weight: bold;
+    background: #FFF;
+}
+
+.modal-search-param .form-button{
+    background: none;
+    border: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #a9a9a9;
+}
+.modal-search-param .form-button.calendar{
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/svg-sedona/calendar.svg");
+}
+.modal-search-param .form-button:hover{color: #000; }
+.modal-search-param .form-button:active{ color: #81b3d2; }
+
+.modal-search-param input[type="text"]{
+    background: #f2f2f2;
+    border: solid 2px #f2f2f2;
+    color: #000;
+}
+.modal-search-param input[type="text"]:hover{
+    background: #ebebeb;
+    border: solid 2px #ebebeb;
+}
+.modal-search-param input[type="text"]:focus{
+    background: #FFF;
+    border: solid 2px #e5e5e5;
+}
+
+.footer-page{background: #FFF;}
+.footer-page .hashtag{font-weight: bold; font-size: 21px;}
+
+.social-contact ul{list-style-type: none;}
+
+.social-button{
+    font-size: 0px;
+    width: 46px;
+    height: 46px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.social-button.tw{background-image: url("../img/svg-sedona/twitter.svg");}
+.social-button.fb{background-image: url("../img/svg-sedona/fb-icon.svg");}
+.social-button.yt{background-image: url("../img/svg-sedona/youtube.svg");}
+
+
+/*---------------------------- hotels ---------------------------------------*/
+
+.wrapper-search-category{
+    background: #000 url("../img/filter-background.jpg");
+    color: #FFF;
+}
+
+.sort-list{list-style-type: none;}
+
+.sort-list-by-category a{color: #b2b2b2; border-bottom: dashed 1px #81b3d2;}
+.sort-list-by-category a:hover{color: #81b3d2; border-bottom: dashed 1px #81b3d2;}
+.sort-list-by-category a:active{color: #000; border-bottom: 0px;}
+.sort-list-by-category a.active{color: #81b3d2; border-bottom: 0px;}
+
+.sort-list-by-value a{color: #b2b2b2;}
+.sort-list-by-value a:hover{color: #000;}
+.sort-list-by-value a:active, .sort-list-by-value a.active{color: #81b3d2;}
+
+.hotel-item:first-of-type{border-top: solid 1px #e5e5e5;}
+.hotel-item{
+    border-bottom: solid 1px #e5e5e5;
+    padding: 10px;
+}
+
+.hotel-item .title{font-size: 21px;}
+.hotel-item .stars{
+    background: url("../img/svg-sedona/star.svg");
+    width: 0px;
+    height: 18px;
+}
+.hotel-item .stars.one-star{width: 18px;}
+.hotel-item .stars.two-star{width: 36px;}
+.hotel-item .stars.three-star{width: 54px;}
+.hotel-item .stars.four-star{width: 72px;}
+.hotel-item .stars.five-star{width: 90px;}
+
+.hotel-item .rating{background: #f2f2f2; color: #8b8b8b;}
