@@ -22,19 +22,26 @@
         </header> <!-- шапка сайта -->
 
         <main class="content-page">
-            <img src="img/background-sedona.jpg" alt="Изображение с видами Седоны" class="header-main-image" width="1200" height="770">
+            <div class="wrapper-image">
+                <img src="img/background-sedona.jpg" alt="Изображение с видами Седоны" class="main-image-bg" width="1200" height="770">
+                <img src="img/welcome-top-bg.png" alt="Седона, добро пожаловать." class="welcome-top-bg" width="460" height="350">
+                <img src="img/background-bottom.png" alt="" class="main-bottom-bg" width="1200" height="60">
+            </div>
             <h1>
                 Седона - небольшой городок в Аризоне,<br>
                 заслуживающий большего!
             </h1>
             <section class="sedona-dignity">
                 <header>
-                    <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
+                    <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
                 </header>
 
                 <section class="dignity-list">
                     <div class="dignity-item allotted-item">
-                        <h3>Настоящий городок</h3>
+                        <h3>
+                            Настоящий <br>
+                            городок
+                        </h3>
                         <p>- №1 -</p>
                         <p>Седона - не атракцион для туристов, там течёт своя жизнь.</p>
                     </div>
@@ -43,15 +50,15 @@
 
                 <section class="dignity-list sub-list">
                     <ul>
-                        <li>
+                        <li class="lodging">
                             <h4>Жильё</h4>
                             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                         </li>
-                        <li>
+                        <li class="food">
                             <h4>Еда</h4>
                             <p>Всегда заказываёте фирменный бутер, не разочаруетесь!</p>
                         </li>
-                        <li>
+                        <li class="souvenirs">
                             <h4>Сувениры</h4>
                             <p>Не только китайского, но и местного производства!</p>
                         </li>
@@ -61,7 +68,10 @@
                 <section class="dignity-list">
                     <img src="img/sedona-layer-2.jpg" alt="Мост дьявола" width="800" height="260">
                     <div class="dignity-item allotted-item">
-                        <h3>Там есть мост дьявола</h3>
+                        <h3>
+                            Там есть <br>
+                            мост дьявола
+                        </h3>
                         <p>- №2 -</p>
                         <p>Да, по нему можно пройти! Если конечно вы осмелитесь.</p>
                     </div>
@@ -69,17 +79,26 @@
 
                 <section class="dignity-list">
                     <div class="dignity-item">
-                        <h3>Небольшая площадь</h3>
+                        <h3>
+                            Небольшая <br>
+                            площадь
+                        </h3>
                         <p>- №3 -</p>
                         <p>Все достопримечательности находятся очень близко.</p>
                     </div>
                     <div class="dignity-item">
-                        <h3>Красивая дорога</h3>
+                        <h3>
+                            Красивая <br>
+                            дорога
+                        </h3>
                         <p>- №4 -</p>
                         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
                     <div class="dignity-item">
-                        <h3>Мало туристов</h3>
+                        <h3>
+                            Мало <br>
+                            туристов
+                        </h3>
                         <p>- №5 -</p>
                         <p>Большинство едет в Гранд Каньон и толпиться там.</p>
                     </div>
@@ -91,40 +110,43 @@
                         Укажите предполагаемые даты поездки,<br>
                         и мы покажем вам лучшие предложения гостиниц в Седоне.
                     </p>
-                    <a class="button button-type-2" href="#">Поиск гостиницы в Седоне</a>
+                    <a id="hotel-search-btn" class="button button-type-2" href="#">Поиск гостиницы в Седоне</a>
 
-                    <div class="modal modal-search-param">
+                    <div class="modal modal-search-param visually-hidden">
                         <form action="https://echo.htmlacademy.ru" method="get">
                             <p>
-                                <label for="occupancy-date">Дата заезда</label>
-                                <input name="occupancy-date" id="occupancy-date" type="text">
+                                <label for="occupancy-date">Дата заезда:</label>
+                                <input name="occupancy-date" id="occupancy-date" type="text" placeholder="24 апреля 2017">
                                 <button type="button" class="form-button calendar">
                                     <!-- <img alt="Календарь" width="21" height="22" src="img/svg-sedona/calendar.svg"> -->
                                 </button>
                             </p>
                             <p>
-                                <label for="eviction-date">Дата выезда</label>
-                                <input name="eviction-date" id="eviction-date" type="text">
+                                <label for="eviction-date">Дата выезда:</label>
+                                <input name="eviction-date" id="eviction-date" type="text" placeholder="4 июля 2017">
                                 <button type="button" class="form-button calendar">
                                     <!-- <img alt="Календарь" width="21" height="22" src="img/svg-sedona/calendar.svg"> -->
                                 </button>
                             </p>
-                            <div>
+                            <div class="number-people">
                                 <div class="wrapper-field">
-                                    <label for="adults-sum">Взрослые</label>
-                                    <button type="button" class="form-button">-</button>
-                                    <input name="adults-sum" id="adults-sum" type="text">
-                                    <button type="button" class="form-button">+</button>
+                                    <label for="adults-sum">Взрослые:</label>
+                                    <div class="wrapper-btn">
+                                        <button type="button" class="counter">-</button>
+                                        <input name="adults-sum" id="adults-sum" type="text">
+                                        <button type="button" class="counter">+</button>
+                                    </div>
                                 </div>
                                 <div class="wrapper-field">
-
-                                    <label for="childrens-sum">Дети</label>
-                                    <button type="button" class="form-button">-</button>
-                                    <input name="childrens-sum" id="childrens-sum" type="text">
-                                    <button type="button" class="form-button">+</button>
+                                    <label for="childrens-sum">Дети:</label>
+                                    <div class="wrapper-btn">
+                                        <button type="button" class="counter">-</button>
+                                        <input name="childrens-sum" id="childrens-sum" type="text">
+                                        <button type="button" class="counter">+</button>
+                                    </div>
                                 </div>
                             </div>
-                            <button type="submit" class="button button-type-1">Найти</button>
+                            <button type="submit" class="start-hotel-search-btn button button-type-1">Найти</button>
                         </form> <!-- всплывающее окно с информацией для выбора гостиниц -->
                     </div>
 

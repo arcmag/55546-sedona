@@ -29,16 +29,16 @@
                         <legend>Инфраструктура</legend>
                         <ul>
                             <li>
-                                <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" type="checkbox" class="visually-hidden">
-                                <label tabindex="0" for="filter-infrastructure-pool">Бассейн</label>
+                                <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" checked type="checkbox" class="visually-hidden">
+                                <label class="filter-label" tabindex="0" for="filter-infrastructure-pool">Бассейн</label>
                             </li>
                             <li>
                                 <input name="filter-infrastructure-parking" id="filter-infrastructure-parking" type="checkbox" class="visually-hidden">
-                                <label tabindex="0" for="filter-infrastructure-parking">Парковка</label>
+                                <label class="filter-label" tabindex="0" for="filter-infrastructure-parking">Парковка</label>
                             </li>
                             <li>
                                 <input name="filter-infrastructure-wi-fi" id="filter-infrastructure-wi-fi" type="checkbox" class="visually-hidden">
-                                <label tabindex="0" for="filter-infrastructure-wi-fi">Wi-Fi</label>
+                                <label class="filter-label" tabindex="0" for="filter-infrastructure-wi-fi">Wi-Fi</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -46,30 +46,35 @@
                         <legend>Тип жилья</legend>
                         <ul>
                             <li>
-                                <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" type="checkbox" class="visually-hidden">
-                                <label tabindex="0" for="filter-type-accommodation-hotel">Гостиница</label>
+                                <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" checked type="checkbox" class="visually-hidden">
+                                <label class="filter-label" tabindex="0" for="filter-type-accommodation-hotel">Гостиница</label>
                             </li>
                             <li>
-                                <input name="filter-type-accommodation-motel" id="filter-type-accommodation-motel" type="checkbox" class="visually-hidden">
-                                <label tabindex="0" for="filter-type-accommodation-motel">Мотель</label>
+                                <input name="filter-type-accommodation-motel" id="filter-type-accommodation-motel" checked type="checkbox" class="visually-hidden">
+                                <label class="filter-label" tabindex="0" for="filter-type-accommodation-motel">Мотель</label>
                             </li>
                             <li>
-                                <input name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" type="checkbox" class="visually-hidden">
-                                <label tabindex="0" for="filter-type-accommodation-apartments">Аппартаменты</label>
+                                <input name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" checked type="checkbox" class="visually-hidden">
+                                <label class="filter-label" tabindex="0" for="filter-type-accommodation-apartments">Аппартаменты</label>
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset class="search-category category-right-align">
                         <legend>Стоимость в сутки (Р):</legend>
-                        <p>
+                        <p class="wrapper-field">
                             <input name="price-from" type="text" placeholder="От 0">
                             <input name="price-before" type="text" placeholder="До 3000">
                         </p>
                         <p>
-                            <input type="range">
+                            <input type="range" class="visually-hidden">
+                            <div class="progress-line">
+                                <div class="progress-position"></div>
+                                <div class="btn-range btn-range-1" tabindex="0"></div>
+                                <div class="btn-range btn-range-2" tabindex="0"></div>
+                            </div>
                         </p>
                         <p>
-                            <button type="submit" class="button">Показать</button>
+                            <button type="submit">Показать</button>
                         </p>
                     </fieldset>
                 </form> <!-- блок с формами установки критериев для поиска отеля -->
@@ -77,10 +82,10 @@
 
 
             <section class="search-result">
-                <header>
+                <header class="header-result">
                     <h2 class="visually-hidden">Результаты поиска</h2>
                     <div class="result">
-                        <span class="total-count">Найдено:</span> <output>3</output>
+                        <span class="total-count">Найдено: <output>3</output></span>
                         <span class="sort">Сортировка: </span>
                     </div>
 
@@ -91,8 +96,8 @@
                     </ul>
 
                     <ul class="sort-list sort-list-by-value">
-                        <li class="sort-by-order-up"><a href="#" class=""></a></li>
-                        <li class="sort-by-order-down"><a href="#" class=""></a></li>
+                        <li><a href="#" class="sort-by-order-up">Вверх</a></li>
+                        <li><a href="#" class="sort-by-order-down">Вниз</a></li>
                     </ul>
                 </header>
                 <section class="hotel-item">
@@ -115,7 +120,7 @@
                 <section class="hotel-item">
                     <img class="hotel-image" src="img/hotel-image-2.jpg" alt="Картинка найденного отеля 2" width="135" height="90">
                     <div class="hotel-info">
-                        <h3 class="title"><a class="link" href="#">Desert quail inn<a/></h3>
+                        <h3 class="title"><a class="link" href="#">Desert quail inn</a></h3>
                         <div class="type">
                             <span class="type">Мотель</span>
                             <span class="price">От 3000 р.</span>
