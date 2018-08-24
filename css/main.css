@@ -3,14 +3,14 @@
 
 @font-face {
     font-family:'PT Sans';
-    src: url('../fonts/ptsans/PTsansBold.woff2') format('woff2'), url('../fonts/ptsans/PTsansBold.woff') format('woff');
+    src: url('../fonts/ptsans/PTSansBold.woff2') format('woff2'), url('../fonts/ptsans/PTSansBold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 @font-face {
     font-family:'PT Sans';
-    src: url('../fonts/ptsans/PTsans.woff2') format('woff2'), url('../fonts/ptsans/PTsans.woff') format('woff');
+    src: url('../fonts/ptsans/PTSans.woff2') format('woff2'), url('../fonts/ptsans/PTSans.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -25,18 +25,28 @@ html{
     box-sizing: border-box;
 }
 body{
-    margin: 0px auto;
-    padding: 0px;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     color: #000;
     background: #FFF;
     text-transform: uppercase;
     line-height: 21px;
-    width: 1200px;
 }
+
+.wrapper-page{
+    width: 1200px;
+    margin: 0px auto;
+    padding: 0px;
+}
+
 .visually-hidden{
-    display: none;
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0;
+    border:0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -101,18 +111,10 @@ a{
     align-items: center;
     margin: 0px;
     padding: 0px;
+    justify-content: space-around;
 }
-.main-nav li:nth-of-type(1){
-    margin-left: 75px;
-}
-.main-nav li:nth-of-type(2){
-    margin-left: 142px;
-}
-.main-nav li:nth-of-type(3){
-    margin-left: 388px;
-}
-.main-nav li:nth-of-type(4){
-    margin-left: 163px;
+.main-nav li{
+    width: 100px;
 }
 .main-nav a.active{
     color: #766357;
@@ -122,31 +124,20 @@ body.main-page{
     text-align: center;
 }
 .wrapper-image{
-    position: relative;
     z-index: -1;
-    padding: 0px;
+    padding-top: 75px;
     height: 510px;
     overflow: hidden;
     margin-bottom: 60px;
-}
-.wrapper-image .main-image-bg{
-    margin-top: -57px;
-}
-.wrapper-image .main-bottom-bg{
-    position: absolute;
-    bottom: -1px;
-    left: 0px;
-}
-.wrapper-image .welcome-top-bg{
-    position: absolute;
-    top: 75px;
-    left: 370px;
+    background: url("../img/background-bottom.png") no-repeat 0px 452px,
+                url("../img/background-sedona.jpg") no-repeat 0px -58px;
 }
 .content-page h1{
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-    margin-bottom: 25px;
+    width: 600px;
+    margin: 0px auto 25px auto;
 }
 .sedona-dignity h2{
     font-size: 14px;
@@ -162,8 +153,9 @@ body.main-page{
 .dignity-list h3, .dignity-list h4{
     font-size: 21px;
     font-weight: bold;
-    margin: 0px;
+    width: 151px;
     margin-bottom: 20px;
+    margin: 0px auto 20px auto;
 }
 .dignity-list.sub-list{
     height: auto;
@@ -224,13 +216,11 @@ body.main-page{
     background: #81b3d2;
     color: #FFF;
 }
-.dignity-list:last-of-type{
-    margin-bottom: 60px;
-}
+
 .content-page footer .title{
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin: 60px 0px 40px 0px;
 }
 .content-page footer .title + p{
     margin-bottom: 50px;
@@ -353,23 +343,26 @@ body.main-page{
     display: flex;
     height: 120px;
     align-items: center;
+    justify-content: space-around;
 }
+.footer-page > * {
+    width: 33.333%;
+}
+
 .footer-page .hashtag{
     font-weight: bold;
     font-size: 21px;
-    margin-left: 139px;
 }
-.social-contact{
-    margin-left: 244px;
-}
+
 .social-contact ul{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
 }
 .social-contact ul li{
-    display: inline-block;
-    margin-left: 4px;
+    padding-left: 4px;
 }
 .social-button{
     font-size: 0px;
@@ -389,11 +382,12 @@ body.main-page{
     background-image: url("../img/svg-sedona/youtube.svg");
 }
 .footer-page .copyright-info{
-    margin-left: 226px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.footer-page .copyright-info > *{
-    display: inline-block;
-    vertical-align: middle;
+.footer-page .copyright-info span{
+    margin-right: 10px;
 }
 /*---------------------------- hotels ---------------------------------------*/
 .wrapper-search-category{
@@ -521,10 +515,7 @@ input[type="checkbox"]:checked + .filter-label::before{
     width: 27px;
     background-image: url("../img/svg-sedona/checkbox-on.svg");
 }
-.search-result{
-    margin-left: 70px;
-    margin-right: 70px;
-}
+
 .header-result{
     display: flex;
     align-items: center;
@@ -609,6 +600,8 @@ input[type="checkbox"]:checked + .filter-label::before{
     border-top: solid 1px #e5e5e5;
 }
 .hotel-item{
+    padding-left: 70px;
+    padding-right: 70px;
     border-bottom: solid 1px #e5e5e5;
     height: 150px;
     display: flex;
