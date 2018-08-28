@@ -1,6 +1,5 @@
 /*--------------------------- fonts --------------------------------*/
 
-
 @font-face {
     font-family:'PT Sans';
     src: url('../fonts/ptsans/PTSansBold.woff2') format('woff2'), url('../fonts/ptsans/PTSansBold.woff') format('woff');
@@ -15,7 +14,6 @@
     font-style: normal;
     font-stretch: normal;
 }
-
 
 /*------------------------------------------------------------------------------------------*/
 *, *::before, *::after{
@@ -32,13 +30,11 @@ body{
     text-transform: uppercase;
     line-height: 21px;
 }
-
 .wrapper-page{
     width: 1200px;
     margin: 0px auto;
     padding: 0px;
 }
-
 .visually-hidden{
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -58,15 +54,17 @@ a{
     color: #FFF;
     font-weight: bold;
 }
-.button-type-1{
+.button-type-1, .button-type-1 path{
     background-color: #81b3d2;
+    fill: #FFF;
 }
 .button-type-1:hover{
     background-color: #669ec0;
 }
-.button-type-1:active{
+.button-type-1:active, .button-type-1:active path{
     background-color: #5496bd;
     color: #7aadcb;
+    fill: #7aadcb;
 }
 .button-type-2{
     background: #766357;
@@ -78,14 +76,17 @@ a{
     background: #503e33;
     color: #857871;
 }
-.link{
+.link, .link path{
     color: #000;
+    fill: #000;
 }
-.link:hover{
+.link:hover, .link:hover path{
     color: #a3c7de;
+    fill: #a3c7de;
 }
-.link:active{
+.link:active, .link:active path{
     color: #b2b2b2;
+    fill: #b2b2b2;
 }
 .header-page{
     position: relative;
@@ -111,10 +112,12 @@ a{
     align-items: center;
     margin: 0px;
     padding: 0px;
-    justify-content: space-around;
 }
 .main-nav li{
-    width: 100px;
+    width: 20%;
+}
+.main-nav li:nth-child(3){
+    margin-left: auto;
 }
 .main-nav a.active{
     color: #766357;
@@ -216,7 +219,6 @@ body.main-page{
     background: #81b3d2;
     color: #FFF;
 }
-
 .content-page footer .title{
     font-size: 30px;
     font-weight: bold;
@@ -348,12 +350,10 @@ body.main-page{
 .footer-page > * {
     width: 33.333%;
 }
-
 .footer-page .hashtag{
     font-weight: bold;
     font-size: 21px;
 }
-
 .social-contact ul{
     list-style-type: none;
     margin: 0px;
@@ -371,15 +371,10 @@ body.main-page{
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center center;
+    display: flex;
 }
-.social-button.tw{
-    background-image: url("../img/svg-sedona/twitter.svg");
-}
-.social-button.fb{
-    background-image: url("../img/svg-sedona/fb-icon.svg");
-}
-.social-button.yt{
-    background-image: url("../img/svg-sedona/youtube.svg");
+.social-button > *{
+    margin: auto;
 }
 .footer-page .copyright-info{
     display: flex;
@@ -389,6 +384,7 @@ body.main-page{
 .footer-page .copyright-info span{
     margin-right: 10px;
 }
+
 /*---------------------------- hotels ---------------------------------------*/
 .wrapper-search-category{
     background: #000 url("../img/filter-background.jpg");
@@ -476,11 +472,15 @@ body.main-page{
     width: 140px;
     background: transparent;
     color: #FFF;
-    border: solid 2px;
+    border: solid 2px #FFF;
     border-radius: 3px;
     text-transform: uppercase;
     display: block;
     margin: 0px auto;
+}
+.search-category.category-right-align button:hover{
+    background: #FFF;
+    color: #000;
 }
 .search-category legend{
     font-weight: bold;
@@ -514,6 +514,9 @@ body.main-page{
 input[type="checkbox"]:checked + .filter-label::before{
     width: 27px;
     background-image: url("../img/svg-sedona/checkbox-on.svg");
+}
+input[type="checkbox"]:disabled + .filter-label::before{
+    opacity: 0.5;
 }
 
 .header-result{
