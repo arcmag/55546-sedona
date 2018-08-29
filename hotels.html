@@ -27,7 +27,7 @@
                 <div class="wrapper-search-category">
                     <form action="https://echo.htmlacademy.ru" method="get">
                         <fieldset class="search-category">
-                            <legend>Инфраструктура</legend>
+                            <legend>Инфраструктура:</legend>
                             <ul>
                                 <li>
                                     <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" checked type="checkbox" class="visually-hidden">
@@ -44,7 +44,7 @@
                             </ul>
                         </fieldset>
                         <fieldset class="search-category">
-                            <legend>Тип жилья</legend>
+                            <legend>Тип жилья:</legend>
                             <ul>
                                 <li>
                                     <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" checked type="checkbox" class="visually-hidden">
@@ -56,27 +56,22 @@
                                 </li>
                                 <li>
                                     <input disabled name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" checked type="checkbox" class="visually-hidden">
-                                    <label class="filter-label" tabindex="0" for="filter-type-accommodation-apartments">Аппартаменты</label>
+                                    <label class="filter-label" tabindex="0" for="filter-type-accommodation-apartments">Апартаменты</label>
                                 </li>
                             </ul>
                         </fieldset>
                         <fieldset class="search-category category-right-align">
                             <legend>Стоимость в сутки (Р):</legend>
-                            <p class="wrapper-field">
+                            <div class="wrapper-field">
                                 <input name="price-from" type="text" placeholder="От 0">
                                 <input name="price-before" type="text" placeholder="До 3000">
-                            </p>
-                            <p>
-                                <input type="range" class="visually-hidden">
-                                <div class="progress-line">
-                                    <div class="progress-position"></div>
-                                    <div class="btn-range btn-range-1" tabindex="0"></div>
-                                    <div class="btn-range btn-range-2" tabindex="0"></div>
-                                </div>
-                            </p>
-                            <p>
-                                <button type="submit">Показать</button>
-                            </p>
+                            </div>
+                            <div class="progress-line">
+                                <div class="progress-position"></div>
+                                <div class="btn-range btn-range-1" tabindex="0"></div>
+                                <div class="btn-range btn-range-2" tabindex="0"></div>
+                            </div>
+                            <button type="submit">Показать</button>
                         </fieldset>
                     </form> <!-- блок с формами установки критериев для поиска отеля -->
                 </div>
@@ -91,14 +86,14 @@
                         </div>
 
                         <ul class="sort-list sort-list-by-category">
-                            <li class="sort-by-price"><a href="#" class="">По цене</a></li>
+                            <li class="sort-by-price"><a href="#" class="active">По цене</a></li>
                             <li class="sort-by-type"><a href="#" class="">По типу</a></li>
                             <li class="sort-by-rating"><a href="#" class="">По рейтингу</a></li>
                         </ul>
 
                         <ul class="sort-list sort-list-by-value">
                             <li><a href="#" class="sort-by-order-up">Вверх</a></li>
-                            <li><a href="#" class="sort-by-order-down">Вниз</a></li>
+                            <li><a href="#" class="sort-by-order-down active">Вниз</a></li>
                         </ul>
                     </header>
                     <section class="hotel-item">
