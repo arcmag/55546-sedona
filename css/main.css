@@ -14,58 +14,6 @@
     font-stretch: normal;
 }
 /*----------------------------------------- animation -------------------------------------------------*/
-@-webkit-keyframes show-message {
-    0%{
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
-    }
-    50%{
-        -webkit-transform: translate(-10px, -10px);
-                transform: translate(-10px, -10px);
-    }
-    100%{
-        -webkit-transform: translate(0px, 0px);
-                transform: translate(0px, 0px);
-    }
-}
-@keyframes show-message {
-    0%{
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
-    }
-    50%{
-        -webkit-transform: translate(-10px, -10px);
-                transform: translate(-10px, -10px);
-    }
-    100%{
-        -webkit-transform: translate(0px, 0px);
-                transform: translate(0px, 0px);
-    }
-}
-@-webkit-keyframes hidden-message {
-    0%{
-        -webkit-transform: translate(0px, 0px);
-                transform: translate(0px, 0px);
-    }
-    100%{
-        -webkit-transform: translate(440px, 50px);
-                transform: translate(440px, 50px);
-        opacity: 0;
-    }
-}
-@keyframes hidden-message {
-    0%{
-        -webkit-transform: translate(0px, 0px);
-                transform: translate(0px, 0px);
-    }
-    100%{
-        -webkit-transform: translate(440px, 50px);
-                transform: translate(440px, 50px);
-        opacity: 0;
-    }
-}
-/*------------------------------------------------------------------------------------------*/
-
 *, *::before, *::after{
     -webkit-box-sizing: inherit;
             box-sizing: inherit;
@@ -84,22 +32,6 @@ body{
     position: relative;
 }
 
-.message-block{
-    position: fixed;
-    right: 100px;
-    bottom: 200px;
-    padding: 10px;
-    background: #CCC;
-    color: #000;
-    -webkit-animation: show-message 0.4s linear forwards,
-                hidden-message 0.4s 4s linear forwards;
-            animation: show-message 0.4s linear forwards,
-                hidden-message 0.4s 4s linear forwards;
-}
-.message-block.error{
-    background: red;
-    color: #FFF;
-}
 .wrapper-page{
     width: 1200px;
     margin: 0px auto;
@@ -321,7 +253,9 @@ body.main-page{
     padding-left: 48px;
     padding-right: 48px;
 }
-
+.content-footer{
+    position: relative;
+}
 .content-footer .title{
     font-size: 30px;
     font-weight: bold;
@@ -345,9 +279,9 @@ body.main-page{
 
 .modal-animation-wrapper{
     position: absolute;
-    left: 668px;
-    bottom: 193px;
-    width: 568px;
+    width: 100%;
+    left: 0px;
+    bottom: 194px;
     height: 400px;
     overflow: hidden;
     -webkit-transition-property: height;
@@ -360,6 +294,7 @@ body.main-page{
          -o-transition-delay: 0s;
             transition-delay: 0s;
 }
+
 .modal-animation-wrapper.hidden-modal{
     height: 0px;
     -webkit-transition-property: height;
@@ -376,6 +311,7 @@ body.main-page{
     top: -500px;
 }
 .modal-search-param {
+    left: 316px;
     position: absolute;
     z-index: 1;
     background: #FFF;

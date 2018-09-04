@@ -1,17 +1,6 @@
 var js = (function () {
     var js = {};
 
-    js.createMessage = function (type, text) {
-        var mBlock = document.createElement("div");
-        mBlock.className = "message-block " + type;
-        mBlock.textContent = text;
-        document.body.appendChild(mBlock);
-
-        setTimeout(function () {
-            mBlock.parentNode.removeChild(mBlock);
-        }, 5000);
-    }
-
     js.toggleClass = function (elementSelector, className) {
         document.querySelector(elementSelector).classList.toggle(className);
     }
@@ -20,19 +9,8 @@ var js = (function () {
         for (var i in data) data[i].value = localStorage.getItem(i) ? localStorage.getItem(i) : "";
     }
 
-    js.checkDataForm = function (data) {
-        for (var i in data)
-            if(data[i].value == "") {
-                js.createMessage("error", "Вы заполнили не все поля!");
-                return false;
-            }
-        return true;
-    }
-
     js.saveDataForm = function (e, formSelector, data) {
         e.preventDefault();
-
-        if(!js.checkDataForm(data) || typeof data !== "object") return;
 
         for (var i in data) localStorage.setItem(i, data[i].value);
 
@@ -43,6 +21,7 @@ var js = (function () {
 } ());
 
 if(document.querySelector(".modal-animation-wrapper")) {
+    js.toggleClass(".modal-animation-wrapper", "hidden-modal");
 
     document.querySelector("#hotel-search-btn").addEventListener("click", function (e) {
         e.preventDefault();
@@ -56,7 +35,7 @@ if(document.querySelector(".modal-animation-wrapper")) {
         adults: document.querySelector("#adults-sum"),
     };
 
-    document.querySelector(".start-hotel-search-btn").addEventListener("click", function (e) {
+    document.querySelector("#modal-window form").addEventListener("submit", function (e) {
         js.saveDataForm(e, "#modal-window form", dataFields);
     });
 
