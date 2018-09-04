@@ -13,7 +13,59 @@
     font-style: normal;
     font-stretch: normal;
 }
+/*----------------------------------------- animation -------------------------------------------------*/
+@-webkit-keyframes show-message {
+    0%{
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+    }
+    50%{
+        -webkit-transform: translate(-10px, -10px);
+                transform: translate(-10px, -10px);
+    }
+    100%{
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+}
+@keyframes show-message {
+    0%{
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px);
+    }
+    50%{
+        -webkit-transform: translate(-10px, -10px);
+                transform: translate(-10px, -10px);
+    }
+    100%{
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+}
+@-webkit-keyframes hidden-message {
+    0%{
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+    100%{
+        -webkit-transform: translate(440px, 50px);
+                transform: translate(440px, 50px);
+        opacity: 0;
+    }
+}
+@keyframes hidden-message {
+    0%{
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+    }
+    100%{
+        -webkit-transform: translate(440px, 50px);
+                transform: translate(440px, 50px);
+        opacity: 0;
+    }
+}
 /*------------------------------------------------------------------------------------------*/
+
 *, *::before, *::after{
     -webkit-box-sizing: inherit;
             box-sizing: inherit;
@@ -31,13 +83,28 @@ body{
     line-height: 21px;
     position: relative;
 }
+
+.message-block{
+    position: fixed;
+    right: 100px;
+    bottom: 200px;
+    padding: 10px;
+    background: #CCC;
+    color: #000;
+    -webkit-animation: show-message 0.4s linear forwards,
+                hidden-message 0.4s 4s linear forwards;
+            animation: show-message 0.4s linear forwards,
+                hidden-message 0.4s 4s linear forwards;
+}
+.message-block.error{
+    background: red;
+    color: #FFF;
+}
 .wrapper-page{
     width: 1200px;
     margin: 0px auto;
     padding: 0px;
-
     -webkit-box-shadow: 0px 0px 5px grey;
-
             box-shadow: 0px 0px 5px grey;
 }
 .visually-hidden{
@@ -265,8 +332,7 @@ body.main-page{
     line-height: 24px;
 }
 .content-footer .map-search-hotels{
-    height: 473px;
-    overflow: hidden;
+    margin-bottom: -120px;
 }
 .content-footer .hotel-search-btn{
     padding: 30px;
@@ -284,8 +350,29 @@ body.main-page{
     width: 568px;
     height: 400px;
     overflow: hidden;
+    -webkit-transition-property: height;
+    -o-transition-property: height;
+    transition-property: height;
+    -webkit-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
+    -webkit-transition-delay: 0s;
+         -o-transition-delay: 0s;
+            transition-delay: 0s;
 }
-.modal-search-param.hidden-modal{
+.modal-animation-wrapper.hidden-modal{
+    height: 0px;
+    -webkit-transition-property: height;
+    -o-transition-property: height;
+    transition-property: height;
+    -webkit-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
+    -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+}
+.modal-animation-wrapper.hidden-modal .modal-search-param{
     top: -500px;
 }
 .modal-search-param {
@@ -424,6 +511,11 @@ body.main-page{
     line-height: 26px;
 }
 /*---------------------------- modal end ---------------------------------------*/
+
+.main-page .footer-page{
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+}
 .footer-page{
     background: #FFF;
     display: -webkit-box;
@@ -577,7 +669,11 @@ body.main-page{
     width: 20px;
     height: 20px;
     background-image: url("../img/svg-sedona/filter-button.svg");
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 .category-right-align .btn-range-1{
     left: 0%;
@@ -586,7 +682,9 @@ body.main-page{
     left: 80%;
 }
 .category-right-align .btn-range:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 .category-right-align button{
     display: block;
@@ -684,7 +782,9 @@ input[type="checkbox"]:disabled + .filter-label::before{
     margin: 0px;
     padding: 0px;
     font-size: 12px;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     height: 17px;
 }
 .sort-list-by-category li{
