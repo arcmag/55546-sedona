@@ -9,8 +9,22 @@ var js = (function () {
         for (var i in data) data[i].value = localStorage.getItem(i) ? localStorage.getItem(i) : "";
     }
 
-    js.saveDataForm = function (e, formSelector, data) {
+    js.checkDataForm = function (data) {
+        for (var i in data) if(data[i].value == "")  return false;
+        return true;
+    }
+
+    js.saveDataForm = function (e, modalSelector, formSelector, data) {
         e.preventDefault();
+
+        if(!js.checkDataForm(data)) {
+            js.toggleClass(modalSelector, "error");
+            setTimeout(function () {
+                js.toggleClass(modalSelector, "error");
+            }, 300);
+
+            return false;
+        }
 
         for (var i in data) localStorage.setItem(i, data[i].value);
 
@@ -21,6 +35,7 @@ var js = (function () {
 } ());
 
 if(document.querySelector(".modal-animation-wrapper")) {
+
     js.toggleClass(".modal-animation-wrapper", "hidden-modal");
 
     document.querySelector("#hotel-search-btn").addEventListener("click", function (e) {
@@ -35,8 +50,8 @@ if(document.querySelector(".modal-animation-wrapper")) {
         adults: document.querySelector("#adults-sum"),
     };
 
-    document.querySelector("#modal-window form").addEventListener("submit", function (e) {
-        js.saveDataForm(e, "#modal-window form", dataFields);
+    document.querySelector(".start-hotel-search-btn").addEventListener("click", function (e) {
+        js.saveDataForm(e, "#modal-window", "#modal-window form", dataFields);
     });
 
     js.initDataForm(dataFields);

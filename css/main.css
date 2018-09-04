@@ -14,6 +14,44 @@
     font-stretch: normal;
 }
 /*----------------------------------------- animation -------------------------------------------------*/
+@-webkit-keyframes error-form {
+    0%{
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px);
+    }
+    33%{
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px);
+    }
+    66%{
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@keyframes error-form {
+    0%{
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px);
+    }
+    33%{
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px);
+    }
+    66%{
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+/*------------------------------------------------------------------------------------------*/
+
 *, *::before, *::after{
     -webkit-box-sizing: inherit;
             box-sizing: inherit;
@@ -310,6 +348,7 @@ body.main-page{
 .modal-animation-wrapper.hidden-modal .modal-search-param{
     top: -500px;
 }
+
 .modal-search-param {
     left: 316px;
     position: absolute;
@@ -323,6 +362,10 @@ body.main-page{
     -webkit-transition: top 0.5s;
     -o-transition: top 0.5s;
     transition: top 0.5s;
+}
+.modal-search-param.error{
+    -webkit-animation: error-form 0.2s;
+            animation: error-form 0.2s;
 }
 .modal-search-param p{
     margin: 0px;
@@ -366,10 +409,11 @@ body.main-page{
     background: #f2f2f2;
     border: solid 2px #f2f2f2;
     outline: 0px;
-
     color: #000;
     text-transform: uppercase;
     font-weight: bold;
+
+
 }
 .modal-search-param input[type="text"]:hover{
     background: #ebebeb;
@@ -379,6 +423,20 @@ body.main-page{
     background: #FFF;
     border: solid 2px #e5e5e5;
 }
+
+.modal-search-param input[type="text"]:-ms-input-placeholder {
+  color: #000;
+}
+.modal-search-param input[type="text"]:-moz-placeholder {
+  color: #000;
+}
+.modal-search-param input[type="text"]::-moz-placeholder {
+  color: #000;
+}
+.modal-search-param input[type="text"]::-webkit-input-placeholder {
+  color: #000;
+}
+
 .modal-search-param .number-people{
     display: -webkit-box;
     display: -ms-flexbox;
