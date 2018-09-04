@@ -17,7 +17,7 @@ var js = (function () {
     }
 
     js.initDataForm = function (data) {
-        for (var i in data) data[i].value = localStorage.getItem(i) ? localStorage.getItem(i) : 0;
+        for (var i in data) data[i].value = localStorage.getItem(i) ? localStorage.getItem(i) : "";
     }
 
     js.checkDataForm = function (data) {
@@ -50,6 +50,8 @@ if(document.querySelector(".modal-animation-wrapper")) {
     });
 
     var dataFields = {
+        occupancyDate: document.querySelector("#occupancy-date"),
+        evictionDate: document.querySelector("#eviction-date"),
         childrens: document.querySelector("#childrens-sum"),
         adults: document.querySelector("#adults-sum"),
     };
