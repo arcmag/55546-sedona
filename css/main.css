@@ -149,12 +149,11 @@ a{
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    min-height: 56px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin: 0px;
-    padding: 0px;
+    padding: 16px 0px;
     line-height: 24px;
     text-align: center;
 }
@@ -706,9 +705,7 @@ input[type="checkbox"]:disabled + .filter-label::before{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: 85px;
-    padding-left: 71px;
-    padding-right: 71px;
+    padding: 16px 71px;
 }
 .header-result .result{
     display: -webkit-box;
