@@ -1,4 +1,3 @@
-/*--------------------------- fonts --------------------------------*/
 @font-face {
     font-family:'PT Sans';
     src: url('../fonts/ptsans/PTSansBold.woff2') format('woff2'), url('../fonts/ptsans/PTSansBold.woff') format('woff');
@@ -13,7 +12,7 @@
     font-style: normal;
     font-stretch: normal;
 }
-/*----------------------------------------- animation -------------------------------------------------*/
+
 @-webkit-keyframes error-form {
     0%{
         -webkit-transform: translateX(-20px);
@@ -50,7 +49,6 @@
                 transform: translateX(0px);
     }
 }
-/*------------------------------------------------------------------------------------------*/
 
 *, *::before, *::after{
     -webkit-box-sizing: inherit;
@@ -177,7 +175,7 @@ a{
 .main-nav a.active{
     color: #766357;
 }
-/*---------------------------- index ---------------------------------------*/
+
 body.main-page{
     text-align: center;
 }
@@ -313,7 +311,6 @@ body.main-page{
     width: 568px;
     display: inline-block;
 }
-/*----------------------------------------------- modal --------------------------------------------------*/
 
 .modal-animation-wrapper{
     position: absolute;
@@ -504,7 +501,6 @@ body.main-page{
     font-size: 21px;
     line-height: 26px;
 }
-/*---------------------------- modal end ---------------------------------------*/
 
 .main-page .footer-page{
     position: relative;
@@ -573,7 +569,7 @@ body.main-page{
 .footer-page .copyright-info span{
     margin-right: 7px;
 }
-/*---------------------------- hotels ---------------------------------------*/
+
 .wrapper-search-category{
     background: #000 url("../img/filter-background.jpg") no-repeat 0px -57px;
     color: #FFF;
@@ -596,7 +592,7 @@ body.main-page{
 .search-category p {
     margin: 0px;
 }
-/*------------------------------------------------------------------------*/
+
 .category-right-align{
     margin-left: auto;
     width: 330px;
