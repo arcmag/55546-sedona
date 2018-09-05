@@ -304,6 +304,9 @@ body.main-page{
 .content-footer .map-search-hotels{
     margin-bottom: -120px;
 }
+.map-search-hotels iframe{
+    border: none;
+}
 .content-footer .hotel-search-btn{
     padding: 30px;
     font-size: 21px;
