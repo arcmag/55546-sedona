@@ -6,7 +6,7 @@ var js = (function () {
     }
 
     js.initDataForm = function (data) {
-        for (var i in data) data[i].value = localStorage.getItem(i) ? localStorage.getItem(i) : "";
+        for (var i in data) if(localStorage.getItem(i)) data[i].value = localStorage.getItem(i);
     }
 
     js.checkDataForm = function (data) {
