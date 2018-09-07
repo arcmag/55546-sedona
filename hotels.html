@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона - список отелей</title>
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/min.normalize.css">
         <link rel="stylesheet" href="css/min.main.css">
     </head>
     <body class="hotels-page">
@@ -30,15 +30,15 @@
                             <legend>Инфраструктура:</legend>
                             <ul>
                                 <li>
-                                    <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" checked type="checkbox" class="visually-hidden">
+                                    <input name="filter-infrastructure-pool" id="filter-infrastructure-pool" checked type="checkbox" class="visually-hidden filter-input">
                                     <label class="filter-label" tabindex="0" for="filter-infrastructure-pool">Бассейн</label>
                                 </li>
                                 <li>
-                                    <input name="filter-infrastructure-parking" id="filter-infrastructure-parking" type="checkbox" class="visually-hidden">
+                                    <input name="filter-infrastructure-parking" id="filter-infrastructure-parking" type="checkbox" class="visually-hidden filter-input">
                                     <label class="filter-label" tabindex="0" for="filter-infrastructure-parking">Парковка</label>
                                 </li>
                                 <li>
-                                    <input name="filter-infrastructure-wi-fi" id="filter-infrastructure-wi-fi" type="checkbox" class="visually-hidden">
+                                    <input name="filter-infrastructure-wi-fi" id="filter-infrastructure-wi-fi" type="checkbox" class="visually-hidden filter-input">
                                     <label class="filter-label" tabindex="0" for="filter-infrastructure-wi-fi">Wi-Fi</label>
                                 </li>
                             </ul>
@@ -47,15 +47,15 @@
                             <legend>Тип жилья:</legend>
                             <ul>
                                 <li>
-                                    <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" checked type="checkbox" class="visually-hidden">
+                                    <input name="filter-type-accommodation-hotel" id="filter-type-accommodation-hotel" checked type="checkbox" class="visually-hidden filter-input">
                                     <label class="filter-label" tabindex="0" for="filter-type-accommodation-hotel">Гостиница</label>
                                 </li>
                                 <li>
-                                    <input name="filter-type-accommodation-motel" id="filter-type-accommodation-motel" checked type="checkbox" class="visually-hidden">
+                                    <input name="filter-type-accommodation-motel" id="filter-type-accommodation-motel" checked type="checkbox" class="visually-hidden filter-input">
                                     <label class="filter-label" tabindex="0" for="filter-type-accommodation-motel">Мотель</label>
                                 </li>
                                 <li>
-                                    <input disabled name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" checked type="checkbox" class="visually-hidden">
+                                    <input disabled name="filter-type-accommodation-apartments" id="filter-type-accommodation-apartments" checked type="checkbox" class="visually-hidden filter-input">
                                     <label class="filter-label" tabindex="0" for="filter-type-accommodation-apartments">Апартаменты</label>
                                 </li>
                             </ul>
@@ -97,10 +97,9 @@
                             <li class="sort-by-type"><a href="#" class="">По типу</a></li>
                             <li class="sort-by-rating"><a href="#" class="">По рейтингу</a></li>
                         </ul>
-
                         <ul class="sort-list sort-list-by-value">
-                            <li><a href="#" class="sort-by-order-up">Вверх</a></li>
-                            <li><a href="#" class="sort-by-order-down active">Вниз</a></li>
+                            <li class="sort-by-order-up"><a href="#">Вверх</a></li>
+                            <li class="sort-by-order-down"><a href="#" class="active">Вниз</a></li>
                         </ul>
                     </header>
                     <section class="hotel-item">
@@ -112,7 +111,8 @@
                                 <span class="price">От 4000 р.</span>
                             </div>
                             <div class="actions">
-                                <a href="#" class="button button-type-1">Подробнее</a> <a href="#" class="button button-type-2">Забронировать</a>
+                                <a href="#" class="button button-type-1"><span>Подробнее</span></a>
+                                <a href="#" class="button button-type-2"><span>Забронировать</span></a>
                             </div>
                         </div>
                         <div class="status">
@@ -129,7 +129,8 @@
                                 <span class="price">От 3000 р.</span>
                             </div>
                             <div class="actions">
-                                <a href="#" class="button button-type-1">Подробнее</a> <a href="#" class="button button-type-2">Забронировать</a>
+                                <a href="#" class="button button-type-1"><span>Подробнее</span></a>
+                                <a href="#" class="button button-type-2"><span>Забронировать</span></a>
                             </div>
                         </div>
                         <div class="status">
@@ -146,7 +147,8 @@
                                 <span class="price">От 2000 р.</span>
                             </div>
                             <div class="actions">
-                                <a href="#" class="button button-type-1">Подробнее</a> <a href="#" class="button button-type-2">Забронировать</a>
+                                <a href="#" class="button button-type-1"><span>Подробнее</span></a>
+                                <a href="#" class="button button-type-2"><span>Забронировать</span></a>
                             </div>
                         </div>
                         <div class="status">
@@ -158,7 +160,7 @@
             </main>
 
             <footer class="footer-page">
-                <p class="hashtag">#visitsedona</p>
+                <p class="hashtag">#visitSEDONA</p>
                 <div class="social-contact">
                     <ul>
                         <li>

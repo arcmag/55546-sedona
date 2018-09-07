@@ -38,6 +38,9 @@ if(document.querySelector(".modal-animation-wrapper")) {
 
     js.toggleClass(".modal-animation-wrapper", "hidden-modal");
 
+    js.toggleClass("#alternative-map", "hidden");
+    js.toggleClass(".map-search-hotels iframe", "hidden");
+
     document.querySelector("#hotel-search-btn").addEventListener("click", function (e) {
         e.preventDefault();
         js.toggleClass(".modal-animation-wrapper", "hidden-modal");
