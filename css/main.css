@@ -104,11 +104,15 @@ a{
 .button-type-1:hover{
     background-color: #669ec0;
 }
-.button-type-1:active, .button-type-1:active path{
+.button-type-1:active{
     background-color: #5496bd;
 }
-.button-type-1:active svg, .button-type-1:active span{
+
+.button-type-1:active svg{
     opacity: 0.3;
+}
+.button-type-1:active{
+    color: rgba(255, 255, 255, 0.3);
 }
 .button-type-2{
     background: #766357;
@@ -119,8 +123,8 @@ a{
 .button-type-2:active{
     background: #503e33;
 }
-.button-type-2:active span{
-    opacity: 0.3;
+.button-type-2:active{
+    color: rgba(255, 255, 255, 0.3);
 }
 .link, .link path{
     color: #000;
@@ -196,12 +200,12 @@ a{
     margin-bottom: 60px;
     background: url("../img/svg-sedona/intro-mask.svg") no-repeat left 0px bottom 0px,
                 url("../img/background-sedona.jpg") no-repeat 0px -56px;
-    background-color: #ce9083;
+    background-color: #4b7ea9;
 }
 .wrapper-image img{
     margin-left: 1px;
 }
-.content-page h1{
+.content-page .main-title{
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
@@ -289,6 +293,7 @@ a{
     background: #eeeeee;
     padding-top: 47px;
     width: 400px;
+    min-height: 256px;
 }
 .dignity-item p{
     margin: 0px;
@@ -326,7 +331,9 @@ a{
     color: #333333;
 }
 .content-footer .map-search-hotels{
-    margin-bottom: -120px;
+    margin-bottom: -114px;
+    height: 587px;
+    background-image: url("../img/map.jpg");
 }
 .map-search-hotels iframe{
     border: none;
@@ -342,7 +349,7 @@ a{
 .modal-animation-wrapper{
     position: absolute;
     left: 0px;
-    bottom: 593px;
+    bottom: 587px;
 }
 .modal-search-param{
     left: 316px;
@@ -380,6 +387,9 @@ a{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+}
+.modal-search-param input{
+    min-height: 38px;
 }
 .data-row input{
     width: 100%;
@@ -830,7 +840,6 @@ a{
     font-size: 0px;
     height: 10px;
     border: solid 6px transparent;
-    opacity: 0.2;
 }
 .sort-list-by-value a:hover{
     opacity: 1;
@@ -842,19 +851,23 @@ a{
     margin-top: 4px;
 }
 .sort-by-order-up a{
-    border-bottom: solid 10px #000;
+    border-bottom: solid 10px #cacaca;
 }
 .sort-by-order-down a{
-    border-top: solid 10px #000;
+    border-top: solid 10px #cacaca;
+}
+.sort-by-order-up a:hover{
+    border-bottom-color: #231F20;
+}
+.sort-by-order-down a:active{
+    border-top-color: #231F20;
 }
 .sort-by-order-up a:active,
 .sort-by-order-up a.active{
-    opacity: 1;
     border-bottom-color: #81b3d2;
 }
 .sort-by-order-down a:active,
 .sort-by-order-down a.active{
-    opacity: 1;
     border-top-color: #81b3d2;
 }
 .hotel-item:first-of-type{
